@@ -1,0 +1,39 @@
+<div class="flex-row d-flex justify-content-center m-1">
+  <div class="card mt-1">
+    <div class="card-body">
+
+      <%= simple_form_for(@order) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <div class="row">
+          <div class="col-xs-6 mr-5">
+            <h3><%= f.input :name, placeholder: "Title of you order" %></h3>
+          </div>
+          <div class="col-xs-6">
+            <h3><%= f.input :email, placeholder: "Title of you order" %></h3>
+          </div>
+        </div>
+
+      <!--
+        <div class="form-inputs">
+            <h3><%= f.input :address, placeholder: "Title of you order" %></h3>
+        </div>
+      !-->
+
+        <div class="form-inputs">
+          <h3><%= f.input :phone, placeholder: "Title of you order" %></h3>
+        </div>
+
+        <div class="form-inputs">
+            <h3><%= f.input :message, placeholder: "Title of you order" %></h3>
+        </div>
+
+        <br>
+        <div class="form-actions">
+          <%= f.button :submit, "save your order", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
