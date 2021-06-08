@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
 
     if @order.save
       OrderMailer.with(order: @order).new_order_email.deliver_later
+      OrderMailer.with(order: @order).order_confirmation_email.deliver_later
 
       flash[:success] = t('flash.order.success')
       redirect_to root_path, notice: 'Order was successfully sent'
