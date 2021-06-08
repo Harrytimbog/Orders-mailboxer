@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Overview
+This is a simple app that helps the user to send Orders. Orders are received as mail and then processed
+
+## Usage
+https://orders-mail-boxer.herokuapp.com/
